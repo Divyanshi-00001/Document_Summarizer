@@ -57,10 +57,3 @@ if st.button("Generate Summary"):
             file_name="summary.txt",
             mime="text/plain"
         )
-
-# from preprocess import preprocess_text
-
-# processed_text = preprocess_text(text)
-# summary = summarize_text(processed_text)
-
-summary = summarize_text(text)
