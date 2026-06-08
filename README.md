@@ -6,13 +6,12 @@ A web-based application that summarizes long text documents and PDF files using 
 
 ## Features
 
-- Upload PDF files for summarization
-- Enter custom text for summarization
-- Extracts text from documents
-- Performs NLP preprocessing
-- Generates extractive summaries
-- Download summary as a text file
-- Simple web interface using Streamlit
+- Text Summarization
+- PDF Summarization
+- NLP preprocessing
+- Extractive summaries
+- Download Summary
+- Streamlit Interface
 
 ## Technologies Used
 
@@ -38,5 +37,3 @@ A web-based application that summarizes long text documents and PDF files using 
 pip install -r requirements.txt
 
 streamlit run app.py
-
-
