@@ -1,24 +1,3 @@
-# from transformers import pipeline
-
-# # Load BART model
-# summarizer = pipeline(
-#     "summarization",
-#     model="facebook/bart-large-cnn"
-# )
-
-# def summarize_text(text):
-#     if len(text) < 50:
-#         return "Text is too short to summarize."
-
-#     summary = summarizer(
-#         text,
-#         max_length=130,
-#         min_length=30,
-#         do_sample=False
-#     )
-
-#     return summary[0]['summary_text']
-
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
@@ -64,3 +43,24 @@ def summarize_text(text):
     summary = " ".join(ranked[:5])
 
     return summary
+
+# from transformers import pipeline
+
+# # Load BART model
+# summarizer = pipeline(
+#     "summarization",
+#     model="facebook/bart-large-cnn"
+# )
+
+# def summarize_text(text):
+#     if len(text) < 50:
+#         return "Text is too short to summarize."
+
+#     summary = summarizer(
+#         text,
+#         max_length=130,
+#         min_length=30,
+#         do_sample=False
+#     )
+
+#     return summary[0]['summary_text']
