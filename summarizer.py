@@ -24,31 +24,16 @@ def summarize_text(text):
         for word in word_tokenize(sentence.lower()):
             if word in freq:
                 sentence_scores[sentence] = sentence_scores.get(sentence, 0) + freq[word]
-    ranked = sorted(
-        sentence_scores,
-        key=sentence_scores.get,
-        reverse=True
-    )
+    ranked = sorted(sentence_scores, key=sentence_scores.get, reverse=True)
     summary = " ".join(ranked[:5])
     return summary
 
 # from transformers import pipeline
 
 # # Load BART model
-# summarizer = pipeline(
-#     "summarization",
-#     model="facebook/bart-large-cnn"
-# )
-
+# summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 # def summarize_text(text):
 #     if len(text) < 50:
 #         return "Text is too short to summarize."
-
-#     summary = summarizer(
-#         text,
-#         max_length=130,
-#         min_length=30,
-#         do_sample=False
-#     )
-
+#     summary = summarizer(text, max_length=130, min_length=30, do_sample=False)
 #     return summary[0]['summary_text']
