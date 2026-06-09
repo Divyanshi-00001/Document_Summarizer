@@ -32,6 +32,14 @@ A web-based application that summarizes long text documents and PDF files using 
 5. Top-ranked sentences are selected as summary
 6. Summary is displayed on Streamlit UI
 
+## Future Work
+
+1. Transformer based abstractive Deep-learning models
+   - BART integration
+   - T5 integration
+2. Multi-language Support
+3. Keyword extraction
+
 ## Run
 
 pip install -r requirements.txt
