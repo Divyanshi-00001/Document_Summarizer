@@ -76,7 +76,7 @@ The project is designed to reduce the time required to read lengthy documents by
 8. Summary and keywords are displayed on the Streamlit interface.
 9. User can download the generated summary.
 
-## System architecture diagram (optional)
+## System architecture diagram
 
     A simple ASCII or image diagram showing: UI (Streamlit) -> Input handling -> Language detection -> Translation (optional) -> Chunking -> Summarization -> Keyword extraction -> Export.
 
@@ -117,7 +117,7 @@ streamlit run app.py
  Divyanshi Agarwal
 
  B.Tech CSE (AI & Data Science)
- 
+
  Graphic Era Deemed to be University
 
 
