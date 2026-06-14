@@ -6,17 +6,38 @@ AI Multilingual Document Summarizer is a web-based application that generates co
 
 The project is designed to reduce the time required to read lengthy documents by automatically extracting the most important information and presenting it in a concise form.
 
-## Features
+## Code snippets
 
-* Text Summarization
-* PDF Document Summarization
-* Deep Learning-based Abstractive Summarization
-* Automatic Language Detection
-* Multilingual Document Support
-* Keyword Extraction
-* PDF Text Extraction
-* Download Summary Option
-* Interactive Streamlit Interface
+1. app.py (updated)
+    Features:
+        Text or PDF input
+        Language detection
+        Optional translation to English for summarization and back to source language
+        Adaptive chunking (via chunker.py)
+        Per-chunk summaries displayed in UI
+        Keywords, download of final summary
+        Progress indicators and basic error handling
+
+2. chunker.py 
+    Simple token-based chunking that respects a max_tokens budget.
+    Uses the same tokenizer as my summarizer to keep compatibility.
+
+3. summarizer.py 
+    Designed to summarize per chunk and return a combined summary.
+
+4. keyword_extractor.py 
+    Returns top 10 keywords
+
+5. language_detector.py
+    Simple language detection with a fallback.
+
+6. translator.py 
+    Lightweight translation helpers using deep-translator.
+    translate_to_english: auto-detect source, translate to English
+    translate_from_english: translate from English to a target language (e.g., "es" for Spanish, "fr" for French, etc.)
+
+7. requirements.txt 
+    Include a couple of added libraries and pin versions for reproducibility.
 
 ## Technologies Used
 
@@ -55,25 +76,7 @@ The project is designed to reduce the time required to read lengthy documents by
 8. Summary and keywords are displayed on the Streamlit interface.
 9. User can download the generated summary.
 
-## Project Architecture
-
-Input Document
-↓
-PDF/Text Extraction
-↓
-Language Detection
-↓
-Text Chunking
-↓
-Transformer-based Summarization
-↓
-Keyword Extraction
-↓
-Summary Generation
-↓
-Streamlit User Interface
-
-## Skills Demonstrated
+## Skills Set Required
 
 * Natural Language Processing (NLP)
 * Deep Learning
@@ -88,13 +91,9 @@ Streamlit User Interface
 
 ## Future Enhancements
 
-* Large PDF Support
-* Chapter-wise Summarization
-* AI-powered Insights Generation
 * Research Paper Analysis
 * Question Answering from Documents
 * PDF Chatbot
-* Named Entity Recognition (NER)
 * PowerPoint Generation from Documents
 
 ## Installation
@@ -112,7 +111,5 @@ streamlit run app.py
 ## Author
 
 Divyanshi Agarwal
-
 B.Tech CSE (AI & Data Science)
-
 Graphic Era Deemed to be University
